@@ -5,4 +5,3 @@ def reverse(sentence):
 
 sentence = "We are ready"
 reverse(sentence)
-

@@ -1,17 +1,23 @@
-def filterprime(num):
-    def isprime(n):
-        if n <= 1:
+lst = map(int, input().split())
+
+def isprime(x):
+    x = int(x)
+    if x <= 1:
+        return False
+    for i in range(2, x):
+        if x % i == 0:
             return False
-        for i in range(2,n):
-            if n % i == 0:
-                return False
 
-        return True
+    return True
+def filter_prime(lst):
+    x = []
+    for i in lst:
+        if isprime(i):
+            x.append(i)
+    return x
 
-    return [n for n in num if isprime(n)]
 
-
-print(filterprime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+print(filter_prime(lst))
 
 
 
