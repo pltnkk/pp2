@@ -10,6 +10,7 @@ print("DN                                                 Description           
 print("-------------------------------------------------- --------------------  ------  ------")
 
 for i in js['imdata']:
+
     print(i['l1PhysIf']['attributes']['dn'], end ="                       \t")
     print(i['l1PhysIf']['attributes']['descr'], end= "  \t")
     print( i['l1PhysIf']['attributes']['speed'], end= "   ")
@@ -17,6 +18,3 @@ for i in js['imdata']:
 
 
 file.close()
-
-
-
