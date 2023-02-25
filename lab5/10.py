@@ -1,11 +1,8 @@
 import re
 
+str = input()
+def spaces(str):
 
-a = input()
-
-def snaaake(a):
-    string = re.sub("(?<!^)(?=[A-Z])", "_", a).lower()
-    return string
-
-print(snaaake(a))
-
+    a =  re.sub(r"(\w)([A-Z])", r"\1 \2", str)
+    return a
+print(spaces(str))
